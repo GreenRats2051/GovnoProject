@@ -9,6 +9,7 @@ public class BallDamage : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.GetComponent<EnemyStats>().hp--;
+            
         }
     }
 }
