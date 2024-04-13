@@ -19,12 +19,12 @@ public class Heat : MonoBehaviour
         {
             for(int i = 0; i < 10; i++)
             {
-                transform.localPosition += new Vector3(0, 0.1f, 0);
+                transform.localPosition += new Vector3(0, 0.15f, 0);
                 yield return new WaitForSeconds(0.01f);
             }
             for (int i = 0; i < 10; i++)
             {
-                transform.localPosition -= new Vector3(0, 0.1f, 0);
+                transform.localPosition -= new Vector3(0, 0.15f, 0);
                 yield return new WaitForSeconds(0.01f);
             }
             canstart = true;
