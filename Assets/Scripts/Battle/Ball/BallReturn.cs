@@ -6,6 +6,7 @@ public class BallReturn : MonoBehaviour
 {
     public Rigidbody2D rigidbody2D;
     public GameObject platform;
+    public PlayerHeart PlayerHeart;
     private void Awake()
     {
         transform.parent = platform.transform;
@@ -19,6 +20,7 @@ public class BallReturn : MonoBehaviour
 
         rigidbody2D.velocity = Vector3.zero;
         rigidbody2D.isKinematic = true;
+        PlayerHeart.OnHeartLost();
     }
     private void Update()
     {
