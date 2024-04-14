@@ -1,17 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public TMP_Text text;
     public Rigidbody2D rigidbody2D;
     public Vector2 position;
     public float accelerationTime;
     public float speed;
     public float timeLeft;
+    public int hp;
 
     void Update()
     {
+        text.text = "HP: " + hp;
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {

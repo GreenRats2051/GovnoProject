@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0568c88557292954a82b6e30895d7b2f, type: 3}
   m_Name: DialogueSO
   m_EditorClassIdentifier: 
-  friendsSprite:
-  - {fileID: 0}
+  doctorSprite:
+  - {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 0}
   characterSprite:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   dialogue:
-  - 
-  - 
+  - test1
+  - test2
