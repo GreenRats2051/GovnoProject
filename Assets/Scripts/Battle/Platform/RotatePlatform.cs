@@ -11,7 +11,7 @@ public class RotatePlatform : MonoBehaviour
     void Update()
     {
         inputAction = Input.GetAxis("Horizontal");
-        rotatePlatform += inputAction * rotatePlatformSpeed;
+        rotatePlatform += inputAction * rotatePlatformSpeed*Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 0, rotatePlatform);
     }
 }

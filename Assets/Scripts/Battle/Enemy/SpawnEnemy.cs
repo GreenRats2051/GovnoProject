@@ -8,15 +8,25 @@ public class SpawnEnemy : MonoBehaviour
     public Transform downRightPos;
     public GameObject enemy;
     public Vector3 position;
+    GameObject enemyOnScrin;
+    float spawntime ;
 
-    void Start()
+    private void Update()
     {
-        Spawn();
+        if (enemyOnScrin == null)
+        {
+            spawntime = Time.time;
+            if (Time.time - spawntime > 3f)
+            {
+                Spawn();
+            }
+
+        }
     }
 
     void Spawn()
     {
         position = new Vector2(Random.Range(upLeftPos.position.x, downRightPos.position.x), Random.Range(upLeftPos.position.y, downRightPos.position.y));
-        Instantiate(enemy, position, Quaternion.identity);
+        enemyOnScrin = Instantiate(enemy, position, Quaternion.identity);
     }
 }
