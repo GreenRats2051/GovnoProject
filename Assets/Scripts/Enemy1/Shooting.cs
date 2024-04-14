@@ -5,12 +5,12 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public Transform playerTransform;
-    public float shootingRange = 150f;
+    private float shootingRange = 1500000000000000000000f;
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    public float shootingInterval = 15f;
-    private float shootingTimer;
+    private float shootingInterval = 15f;
+    private float shootingTimer = 10f;
 
     private void Update()
     {
@@ -30,6 +30,6 @@ public class Shooting : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = (playerTransform.position - firePoint.position).normalized * 10f; //Возможно тут ошибка
-        Destroy(bullet, 1f);
+        Destroy(bullet, 10f);
     }
 }
