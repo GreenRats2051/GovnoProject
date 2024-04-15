@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager 
 {
     public static GameManager instance
     {
         get
         {
             if (_instance == null)
+            {
                 _instance = new GameManager();
+            }
+                
+            
+
             return _instance;
         }
     }
@@ -21,17 +26,6 @@ public class GameManager : MonoBehaviour
     static public int posAnsvers = 0;
     static public int posTerapia = 0;
     static public int pils = 0;
+    private GameManager() { }
 
-    private void Awake()
-    {
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
 }

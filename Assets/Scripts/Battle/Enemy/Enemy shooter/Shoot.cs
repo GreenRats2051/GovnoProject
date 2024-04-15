@@ -17,10 +17,7 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
-        if (enemy == null)
-        {
-            enemy = GameObject.FindGameObjectWithTag("Enemy");
-        }
+
         rotateUnit -= rotateUnitSpeed * Time.deltaTime * speed;
         transform.rotation = Quaternion.Euler(0, 0, rotateUnit);
         if (enemy != null)
@@ -29,12 +26,11 @@ public class Shoot : MonoBehaviour
         }
         if (timeShoot >= timeNextShoot)
         {
-            if (enemy != null)
-            {
+
                 GameObject bulletPrefab = Instantiate(bullet, startShoot.position, Quaternion.identity);
                 bulletPrefab.GetComponent<Rigidbody2D>().AddForce(startShoot.right, ForceMode2D.Impulse);
                 timeShoot = 0;
-            }
+            
         }
 
     }
