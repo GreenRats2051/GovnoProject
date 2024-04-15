@@ -8,5 +8,4 @@ public class CharacterDialogue : ScriptableObject
     public Sprite[] doctorSprite;
     public Sprite[] characterSprite;
     public string[] dialogue;
-    public InventoryAndStats inventoryAndStats;
 }

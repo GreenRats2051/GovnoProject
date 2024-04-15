@@ -49,6 +49,6 @@ public class Dialogue : MonoBehaviour
 
     public void Chouse(int pills)
     {
-        characterDialogue.inventoryAndStats.pills += pills;
+        //characterDialogue.inventoryAndStats.pills += pills;
     }
 }

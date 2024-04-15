@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DayOne.unity
+    guid: 9221e85a5454d89428482ed273754a6e
+  - enabled: 1
+    path: Assets/Scenes/DayTwo.unity
+    guid: aae39cb029a6d924fa5a1dfa69719796
+  - enabled: 1
+    path: Assets/Scenes/DayThree.unity
+    guid: a183e7496a3c15d4b82d624bb997dadb
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 683d194087600f14192ea2830cefaff4
   m_configObjects: {}

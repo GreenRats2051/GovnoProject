@@ -13,14 +13,14 @@ public class UnitShoot : MonoBehaviour
     public float rotateUnitSpeed;
     public float timeNextShoot;
     public float timeShoot;
-
+    private int speed = 50;
     void Update()
     {
         if(enemy == null)
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy");
         }
-        rotateUnit -= rotateUnitSpeed;
+        rotateUnit -= rotateUnitSpeed*Time.deltaTime* speed;
         transform.rotation = Quaternion.Euler(0, 0, rotateUnit);
         if (enemy != null)
         {

@@ -7,17 +7,24 @@ public class EnemyAI : MonoBehaviour
 {
     public TMP_Text text;
     public Rigidbody2D rigidbody2D;
+    public NextLevel nextLevel;
     public Vector2 position;
     public float accelerationTime;
     public float speed;
     public float timeLeft;
     public int hp;
 
+    private void Start()
+    {
+        nextLevel = FindAnyObjectByType<NextLevel>();
+    }
+
     void Update()
     {
         text.text = "HP: " + hp;
         if (hp <= 0)
         {
+            nextLevel.destroyedEnemy++;
             Destroy(gameObject);
         }
 

@@ -7,10 +7,10 @@ public class UnitAttack : MonoBehaviour
 {
     public float rotateUnit;
     public float rotateUnitSpeed;
-
+    private int speed = 50;
     private void Update()
     {
-        rotateUnit -= rotateUnitSpeed;
+        rotateUnit -= rotateUnitSpeed*Time.deltaTime* speed;
         transform.rotation = Quaternion.Euler(0, 0, rotateUnit);
     }
 
