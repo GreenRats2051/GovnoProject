@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cf05dbed8bf8e4d8a455e8d4dec2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameScene: DayThree
+  nameScene: Novella
   spawnEnemy: {fileID: 414909880}
   destroyedEnemy: 0
 --- !u!1 &1623112866

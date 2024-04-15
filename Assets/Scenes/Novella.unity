@@ -693,6 +693,7 @@ GameObject:
   - component: {fileID: 968374326}
   - component: {fileID: 968374325}
   - component: {fileID: 968374324}
+  - component: {fileID: 968374327}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -774,6 +775,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &968374327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968374323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd77fc7c870e684186440a46187bd04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameScene1: DayOne
+  NameScene2: DayTwo
+  NameScene3: DayThree
 --- !u!1 &1112934831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377ca67561c451742b7f952fd029f935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shangescen: {fileID: 0}
   SpriteSpeak: {fileID: 21300000, guid: dae5a44c97ca20d4c98808dfc8e9375f, type: 3}
   SpriteAnswer: {fileID: 21300000, guid: bdc61974a667016408f3365ae57d41ee, type: 3}
   BackG: {fileID: 617331944}

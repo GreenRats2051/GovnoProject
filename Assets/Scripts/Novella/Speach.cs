@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Speach : MonoBehaviour
 {
+    public Shangescen Shangescen;
     public Sprite SpriteSpeak;
     public Sprite SpriteAnswer;
     public Image BackG;
@@ -56,8 +57,15 @@ public class Speach : MonoBehaviour
     {
         if ((Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.E)) && next)
         {
+            if(GameManager.pos==Terapias[GameManager.posTerapia].Length)
+            {
+                Shangescen.Onclick();
+            }
+            else
+            {
+                OnClick();
+            }
 
-            OnClick();
 
         }
 

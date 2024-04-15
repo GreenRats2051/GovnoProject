@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: 683d194087600f14192ea2830cefaff4
+  - enabled: 1
+    path: Assets/Scenes/Novella.unity
+    guid: e1c6fc0d51ccc70419f44e4c4f6e22c5
   m_configObjects: {}
