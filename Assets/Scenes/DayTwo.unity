@@ -1158,7 +1158,8 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file://C:/Users/npubg/Test/Assets/Video/IMG_2141.MOV
+  m_Url: file://C:/Users/Matvey/Documents/GitHub/ProjectTwo2D/Assets/StreamingAssets/IMG_2141
+    (video-converter.com).mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1

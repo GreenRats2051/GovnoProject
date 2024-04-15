@@ -26,7 +26,7 @@ public class Speach : MonoBehaviour
     bool ChangeAspect = true;
     public TextMeshProUGUI textMeshProUGUI;
     public string[][] AnsversMasEng = new string[][] { Answers1Eng, Answers2Eng, Answers3Eng };
-    public string[][] Terapias = new string[][] { Terapia1Eng, Terapia2Eng, Terapia3Eng };
+    
     public static string[] Terapia1Eng = new string[] { "- good afternoon, I already thought that you would not come. How are you feeling today?",
 "-Are you sure about that? After all, rehabilitation is not an easy process...",
 "- I am absolutely sure",
@@ -62,7 +62,7 @@ public class Speach : MonoBehaviour
 
     static string[] Answers3Eng = new string[] { "- I will return home and finally be able to be alone with myself", "- I will return to work, start a family, children, and live a completely ordinary life",
 "- do I have a future after this?" };
-
+    public string[][] Terapias = new string[][] { Terapia1Eng, Terapia2Eng, Terapia3Eng };
 
 
 
@@ -151,8 +151,8 @@ public class Speach : MonoBehaviour
         for (int i = 0; i < Terapias[GameManager.posTerapia][GameManager.pos].Length; i++)
         {
             textMeshProUGUI.text += Terapias[GameManager.posTerapia][GameManager.pos][i];
-            yield return new WaitForSeconds(0.07f);
             SourceOfTiping.PlayOneShot(TipingText);
+            yield return new WaitForSeconds(0.07f);
         }
         next = true;
         //textMeshProUGUI.text += Terapia1Eng[GameManager.pos];
