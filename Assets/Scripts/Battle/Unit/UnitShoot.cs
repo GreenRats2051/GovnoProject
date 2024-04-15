@@ -31,7 +31,7 @@ public class UnitShoot : MonoBehaviour
             if (enemy != null)
             {
                 GameObject bulletPrefab = Instantiate(bullet, startShoot.position, Quaternion.identity);
-                bulletPrefab.GetComponent<Rigidbody2D>().AddForce(startShoot.right, ForceMode2D.Impulse);
+                bulletPrefab.GetComponent<Rigidbody2D>().AddForce((enemy.transform.position-startShoot.position)*2, ForceMode2D.Impulse);
                 timeShoot = 0;
             }
         }

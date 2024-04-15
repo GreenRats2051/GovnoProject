@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Point1
+  - Point2
+  - Point3
+  - Point4
   layers:
   - Default
   - TransparentFX

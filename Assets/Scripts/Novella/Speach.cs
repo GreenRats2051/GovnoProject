@@ -151,7 +151,7 @@ public class Speach : MonoBehaviour
         for (int i = 0; i < Terapias[GameManager.posTerapia][GameManager.pos].Length; i++)
         {
             textMeshProUGUI.text += Terapia1Eng[GameManager.pos][i];
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.07f);
             SourceOfTiping.PlayOneShot(TipingText);
         }
         next = true;

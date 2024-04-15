@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 249447308}
   m_Layer: 0
   m_Name: Pos1
-  m_TagString: Untagged
+  m_TagString: Point1
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 394104585}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 608096564}
   m_Layer: 0
   m_Name: Pos2
-  m_TagString: Untagged
+  m_TagString: Point2
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 958376205}
   m_Layer: 0
   m_Name: Pos3
-  m_TagString: Untagged
+  m_TagString: Point3
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1762,7 +1762,7 @@ MonoBehaviour:
   bulletSpeed: 4
   rotateUnit: 0
   rotateUnitSpeed: 4
-  timeNextShoot: 4
+  timeNextShoot: 2
   timeShoot: 0
 --- !u!212 &1648159593
 SpriteRenderer:
@@ -1806,7 +1806,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.19421315, g: 1, b: 0, a: 0.27450982}
+  m_Color: {r: 0.19421315, g: 1, b: 0, a: 0.18431373}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   isfire: 0
   mousePos: {x: 0, y: 0, z: 0}
   mousePosClick: {x: 0, y: 0, z: 0}
-  bullet: {fileID: 8659589723487944131, guid: c92bedb2d8da70a458ebb719164c7f46, type: 3}
+  bullet: {fileID: 8659589723487944131, guid: 4f5e445f9a0b5234f978bb1b78f9540c, type: 3}
   SpawnBuletpoint: {fileID: 1226809681}
 --- !u!4 &1674492202
 Transform:
@@ -1878,7 +1878,7 @@ GameObject:
   - component: {fileID: 1692984997}
   m_Layer: 0
   m_Name: Pos4
-  m_TagString: Untagged
+  m_TagString: Point4
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

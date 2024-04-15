@@ -5,18 +5,22 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public Transform[] point;
     public TMP_Text text;
     public Rigidbody2D rigidbody2D;
-    public NextLevel nextLevel;
     public Vector2 position;
-    public float accelerationTime;
+    public float distance;
     public float speed;
-    public float timeLeft;
+    public int idPoint;
     public int hp;
 
-    private void Start()
+    void Start()
     {
-        nextLevel = FindAnyObjectByType<NextLevel>();
+        point[0] = GameObject.FindWithTag("Point1").transform;
+        point[1] = GameObject.FindWithTag("Point2").transform;
+        point[2] = GameObject.FindWithTag("Point3").transform;
+        point[3] = GameObject.FindWithTag("Point4").transform;
+        idPoint = Random.Range(0, point.Length);
     }
 
     void Update()
@@ -24,17 +28,14 @@ public class EnemyAI : MonoBehaviour
         text.text = "HP: " + hp;
         if (hp <= 0)
         {
-            nextLevel.destroyedEnemy++;
             Destroy(gameObject);
         }
-
-        timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0)
+        distance = Vector2.Distance(point[idPoint].position, this.gameObject.transform.position);
+        if (distance <= 1)
         {
-            position = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
-            timeLeft += accelerationTime;
+            idPoint = Random.Range(0, point.Length);
         }
-        rigidbody2D.velocity = new Vector2(position.x * speed, position.y * speed);
+        transform.position = Vector2.MoveTowards(transform.position, point[idPoint].position, speed * Time.deltaTime);
     }
 
     void OnBecameInvisible()
