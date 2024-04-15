@@ -29,6 +29,7 @@ public class EnemyAI : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+            NextLevel.destroyedEnemy++;
         }
         distance = Vector2.Distance(point[idPoint].position, this.gameObject.transform.position);
         if (distance <= 1)

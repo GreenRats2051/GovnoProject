@@ -7,16 +7,17 @@ public class NextLevel : MonoBehaviour
 {
     public string nameScene;
     public SpawnEnemy spawnEnemy;
-    public int destroyedEnemy;
+    public static int destroyedEnemy;
 
     void FixedUpdate()
     {
         if (spawnEnemy.maxEnemySpawn <= destroyedEnemy)
         {
-            SceneManager.LoadScene(nameScene);
             GameManager.posTerapia++;
             GameManager.posAnsvers++;
             GameManager.pos = -1;
+            SceneManager.LoadScene(nameScene);
+
         }
     }
 }

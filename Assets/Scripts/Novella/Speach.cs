@@ -114,15 +114,15 @@ public class Speach : MonoBehaviour
                 buttons[0].gameObject.SetActive(!buttons[0].gameObject.activeSelf);
                 buttons[1].gameObject.SetActive(!buttons[1].gameObject.activeSelf);
                 buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
-                buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
+                buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][1];
                 break;
             case 3:
                 buttons[0].gameObject.SetActive(!buttons[0].gameObject.activeSelf);
-                buttons[1].gameObject.SetActive(!buttons[2].gameObject.activeSelf);
-                buttons[3].gameObject.SetActive(!buttons[3].gameObject.activeSelf);
+                buttons[1].gameObject.SetActive(!buttons[1].gameObject.activeSelf);
+                buttons[2].gameObject.SetActive(!buttons[2].gameObject.activeSelf);
                 buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
-                buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
-                buttons[3].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
+                buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][1];
+                buttons[2].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][2];
                 break;
 
 
@@ -150,7 +150,7 @@ public class Speach : MonoBehaviour
         }
         for (int i = 0; i < Terapias[GameManager.posTerapia][GameManager.pos].Length; i++)
         {
-            textMeshProUGUI.text += Terapia1Eng[GameManager.pos][i];
+            textMeshProUGUI.text += Terapias[GameManager.posTerapia][GameManager.pos][i];
             yield return new WaitForSeconds(0.07f);
             SourceOfTiping.PlayOneShot(TipingText);
         }
