@@ -7,16 +7,27 @@ using UnityEngine.UI;
 
 public class Speach : MonoBehaviour
 {
+    public Transform TransformA;
+    public Transform TransformS;
+
+    public AudioSource SourceOfTiping;
+    public AudioClip player;
+
+    private AudioClip TipingText;
+
+    public AudioClip Medic;
+
     public Shangescen Shangescen;
     public Sprite SpriteSpeak;
     public Sprite SpriteAnswer;
     public Image BackG;
     public List<Button> buttons = new List<Button>();
     bool next = true;
+    bool ChangeAspect = true;
     public TextMeshProUGUI textMeshProUGUI;
     public string[][] AnsversMasEng = new string[][] { Answers1Eng, Answers2Eng, Answers3Eng };
     public string[][] Terapias = new string[][] { Terapia1Eng, Terapia2Eng, Terapia3Eng };
-    public static string[] Terapia1Eng = new string[] { @"- good afternoon, I already thought that you would not come. How are you feeling today?",
+    public static string[] Terapia1Eng = new string[] { "- good afternoon, I already thought that you would not come. How are you feeling today?",
 "-Are you sure about that? After all, rehabilitation is not an easy process...",
 "- I am absolutely sure",
 "- that's great, but I'll still need to run some simple tests to determine your sanity.",
@@ -41,6 +52,8 @@ public class Speach : MonoBehaviour
     static string[] Answers2Eng = new string[] { " - I feel only small feats, and sometimes I feel like before",
  "- as if nothing had happened, I am completely healthy",
  "- maybe these empty words are enough? I'm already tired of all this, it's time to realize that everything is fine with me." };
+
+
     public static string[] Terapia3Eng = new string[] { "- Of course you are blossoming before our eyes! I'm glad to see that you look happier.",
 "- Of course, I even feel a certain surge of strength..",
 "- I want to ask you a slightly unusual question. What can you say about your future? What will you do after recovery?","- Thanks for the answer. I can say that you still look better physically. I think I'll reduce the dose of your medications.",
@@ -78,13 +91,12 @@ public class Speach : MonoBehaviour
         if (GameManager.pos == 0)
         {
             showButton();
-            BackG.sprite = SpriteAnswer;
+           
         }
         else
         {
             GameManager.pos++;
             StartCoroutine(ShowText());
-            BackG.sprite = SpriteSpeak;
         }
 
     }
@@ -119,14 +131,28 @@ public class Speach : MonoBehaviour
 
     }
 
-    IEnumerator ShowText()
+    public IEnumerator ShowText()
     {
         next = false;
+        if (ChangeAspect)
+        {
+            BackG.sprite = SpriteSpeak;
+            ChangeAspect = false;
+            textMeshProUGUI.gameObject.transform.position = TransformS.position;
+            TipingText = Medic;
+        }
+        else
+        {
+            BackG.sprite = SpriteAnswer;
+            ChangeAspect = true;
+            textMeshProUGUI.gameObject.transform.position = TransformA.position;
+            TipingText = player;
+        }
         for (int i = 0; i < Terapias[GameManager.posTerapia][GameManager.pos].Length; i++)
         {
             textMeshProUGUI.text += Terapia1Eng[GameManager.pos][i];
-            yield return new WaitForSeconds(0.02f);
-
+            yield return new WaitForSeconds(0.1f);
+            SourceOfTiping.PlayOneShot(TipingText);
         }
         next = true;
         //textMeshProUGUI.text += Terapia1Eng[GameManager.pos];

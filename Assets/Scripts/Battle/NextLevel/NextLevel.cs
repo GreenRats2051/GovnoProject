@@ -14,6 +14,9 @@ public class NextLevel : MonoBehaviour
         if (spawnEnemy.maxEnemySpawn <= destroyedEnemy)
         {
             SceneManager.LoadScene(nameScene);
+            GameManager.posTerapia++;
+            GameManager.posAnsvers++;
+            GameManager.pos = -1;
         }
     }
 }

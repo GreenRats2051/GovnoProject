@@ -34,7 +34,7 @@ public class TimeStoper : MonoBehaviour
         if(isfire)
             TimeStopControl.fillAmount += 0.1f * Time.deltaTime;
 
-        if (!isreload && !isreload)
+        if (!isreload && !isfire)
         {
             OnTimeStop();
         }
@@ -52,13 +52,5 @@ public class TimeStoper : MonoBehaviour
                 GameObject bulletPrefab = Instantiate(bullet, SpawnBuletpoint.position, Quaternion.identity);
                 bulletPrefab.GetComponent<Rigidbody2D>().AddForce( (mousePosClick - SpawnBuletpoint.position)* bulet_Speed, ForceMode2D.Impulse);
             }
-
-
-        
-
-
-
     }
-
-
 }
