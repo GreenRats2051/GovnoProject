@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Novella.unity
+    guid: e1c6fc0d51ccc70419f44e4c4f6e22c5
   - enabled: 1
     path: Assets/Scenes/DayOne.unity
     guid: 9221e85a5454d89428482ed273754a6e
@@ -20,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: 683d194087600f14192ea2830cefaff4
-  - enabled: 1
-    path: Assets/Scenes/Novella.unity
-    guid: e1c6fc0d51ccc70419f44e4c4f6e22c5
   m_configObjects: {}

@@ -57,7 +57,7 @@ public class Speach : MonoBehaviour
     {
         if ((Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.E)) && next)
         {
-            if(GameManager.pos==Terapias[GameManager.posTerapia].Length)
+            if(GameManager.pos==Terapias[GameManager.posTerapia].Length-1)
             {
                 Shangescen.Onclick();
             }
