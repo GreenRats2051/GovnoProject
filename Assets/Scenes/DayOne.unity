@@ -928,7 +928,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file://C:/Users/Matvey/Documents/GitHub/ProjectTwo2D/Assets/Video/IMG_2141.MOV
+  m_Url: file://C:/Users/npubg/Test/Assets/Video/IMG_2141.MOV
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1717,7 +1717,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameScene: Novella
   spawnEnemy: {fileID: 1613658851}
-  destroyedEnemy: 0
 --- !u!1 &1688196903
 GameObject:
   m_ObjectHideFlags: 0

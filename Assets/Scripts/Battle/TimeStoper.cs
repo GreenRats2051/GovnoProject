@@ -25,10 +25,10 @@ public class TimeStoper : MonoBehaviour
             
             
         }
-        else if (TimeStopControl.fillAmount ==1)
+        if (TimeStopControl.fillAmount ==1)
         {
             isreload = true;
-            
+            isfire = false;
         }
 
         if(isfire)
@@ -42,15 +42,15 @@ public class TimeStoper : MonoBehaviour
     }
     public void OnTimeStop()
     { 
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (Input.GetMouseButtonDown(0))
-            {
-                mousePosClick = mousePos;
-                Debug.Log(mousePosClick);
-                Time.timeScale = 1;
-                isfire = true;
-                GameObject bulletPrefab = Instantiate(bullet, SpawnBuletpoint.position, Quaternion.identity);
-                bulletPrefab.GetComponent<Rigidbody2D>().AddForce( (mousePosClick - SpawnBuletpoint.position)* bulet_Speed, ForceMode2D.Impulse);
-            }
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetMouseButtonDown(0))
+        {
+            Time.timeScale = 1;
+            isfire = true;
+            mousePosClick = mousePos;
+            Debug.Log(mousePosClick);
+            GameObject bulletPrefab = Instantiate(bullet, SpawnBuletpoint.position, Quaternion.identity);
+            bulletPrefab.GetComponent<Rigidbody2D>().AddForce( (mousePosClick - SpawnBuletpoint.position)* bulet_Speed, ForceMode2D.Impulse);
+        }
     }
 }
