@@ -52,8 +52,8 @@ public class TimeStoper : MonoBehaviour
                 GameObject bulletPrefab = Instantiate(bullet, SpawnBuletpoint.position, Quaternion.identity);
                 bulletPrefab.GetComponent<Rigidbody2D>().AddForce( (mousePosClick - SpawnBuletpoint.position)* bulet_Speed, ForceMode2D.Impulse);
             }
-            
-            
+
+
         
 
 
