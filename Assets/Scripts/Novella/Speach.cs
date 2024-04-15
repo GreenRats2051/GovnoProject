@@ -13,11 +13,6 @@ public class Speach : MonoBehaviour
     public List<Button> buttons = new List<Button>();
     bool next = true;
     public TextMeshProUGUI textMeshProUGUI;
-
-
-
-
-
     public string[][] AnsversMasEng = new string[][] { Answers1Eng, Answers2Eng, Answers3Eng };
     public string[][] Terapias = new string[][] { Terapia1Eng, Terapia2Eng, Terapia3Eng };
     public static string[] Terapia1Eng = new string[] { @"- good afternoon, I already thought that you would not come. How are you feeling today?",
@@ -59,27 +54,27 @@ public class Speach : MonoBehaviour
 
     private void Update()
     {
-        if ((Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.E))&&next)
+        if ((Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.E)) && next)
         {
-            
+
             OnClick();
-            
+
         }
-        
+
 
     }
     public void OnClick()
     {
 
         textMeshProUGUI.text = null;
-        if (GameManager.pos==0)
+        if (GameManager.pos == 0)
         {
             showButton();
             BackG.sprite = SpriteAnswer;
         }
         else
         {
-            GameManager.pos ++;
+            GameManager.pos++;
             StartCoroutine(ShowText());
             BackG.sprite = SpriteSpeak;
         }
@@ -95,7 +90,7 @@ public class Speach : MonoBehaviour
                 buttons[0].gameObject.SetActive(!buttons[0].gameObject.activeSelf);
                 buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
                 break;
-                case 2:
+            case 2:
                 buttons[0].gameObject.SetActive(!buttons[0].gameObject.activeSelf);
                 buttons[1].gameObject.SetActive(!buttons[1].gameObject.activeSelf);
                 buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
@@ -109,10 +104,10 @@ public class Speach : MonoBehaviour
                 buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
                 buttons[3].GetComponentInChildren<TextMeshProUGUI>().text = AnsversMasEng[GameManager.posAnsvers][0];
                 break;
-            
+
 
         }
-       
+
 
     }
 
@@ -123,7 +118,7 @@ public class Speach : MonoBehaviour
         {
             textMeshProUGUI.text += Terapia1Eng[GameManager.pos][i];
             yield return new WaitForSeconds(0.02f);
-            
+
         }
         next = true;
         //textMeshProUGUI.text += Terapia1Eng[GameManager.pos];
