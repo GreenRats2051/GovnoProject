@@ -2372,6 +2372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameScene: Final
   spawnEnemy: {fileID: 414909880}
+  destroyedEnemy: 0
 --- !u!82 &1590376364
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3085,6 +3086,7 @@ MonoBehaviour:
   SpriteRenderer2: {fileID: 21300000, guid: 8981573f2ea8bfa48a37cc75d3da168a, type: 3}
   SpriteRenderer3: {fileID: 21300000, guid: fa5f3668a843b72499b6a76b5d95c2c8, type: 3}
   BackGround: {fileID: 1339952069}
+  nextLevel: {fileID: 1590376363}
 --- !u!1 &1787882887
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public Transform[] point;
+    public NextLevel nextLevel;
     public TMP_Text text;
     public Rigidbody2D rigidbody2D;
     public Vector2 position;
@@ -21,6 +22,7 @@ public class EnemyAI : MonoBehaviour
         point[2] = GameObject.FindWithTag("Point3").transform;
         point[3] = GameObject.FindWithTag("Point4").transform;
         idPoint = Random.Range(0, point.Length);
+        nextLevel = FindAnyObjectByType<NextLevel>();
     }
 
     void Update()
@@ -29,7 +31,7 @@ public class EnemyAI : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
-            NextLevel.destroyedEnemy++;
+            nextLevel.destroyedEnemy++;
         }
         distance = Vector2.Distance(point[idPoint].position, this.gameObject.transform.position);
         if (distance <= 1)

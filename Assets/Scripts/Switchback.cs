@@ -9,17 +9,19 @@ public class Switchback : MonoBehaviour
     public Sprite SpriteRenderer2;
     public Sprite SpriteRenderer3;
     public Image BackGround;
+    public NextLevel nextLevel;
+
     private void Update()
     {
-        if (NextLevel.destroyedEnemy<2)
+        if (nextLevel.destroyedEnemy < 2)
         {
             BackGround.sprite = SpriteRenderer1;
         }
-        else if(NextLevel.destroyedEnemy  == 4)
+        else if(nextLevel.destroyedEnemy  == 4)
         {
             BackGround.sprite = SpriteRenderer2;
         }
-        else if (NextLevel.destroyedEnemy == 6)
+        else if (nextLevel.destroyedEnemy == 6)
         {
             BackGround.sprite = SpriteRenderer3;
         }
