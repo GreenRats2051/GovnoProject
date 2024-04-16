@@ -68,19 +68,27 @@ public class Speach : MonoBehaviour
 
     private void Update()
     {
-        if ((Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.E)) && next)
+        try
         {
-            if(GameManager.pos==Terapias[GameManager.posTerapia].Length-1)
+            if ((Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.E)) && next)
             {
-                Shangescen.Onclick();
-            }
-            else
-            {
-                OnClick();
-            }
+                if (GameManager.pos == Terapias[GameManager.posTerapia].Length - 1)
+                {
+                    Shangescen.Onclick();
+                }
+                else
+                {
+                    OnClick();
+                }
 
 
+            }
         }
+        catch(IndexOutOfRangeException w)
+        {
+            Shangescen.Onclick();
+        }
+
 
 
     }

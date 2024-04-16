@@ -26,9 +26,7 @@ public class Shangescen : MonoBehaviour
             SceneManager.LoadScene(NameScene3);
 
         }
-        GameManager.posTerapia++;
-        GameManager.posAnsvers++;
-        GameManager.pos = -1;
+
 
     }
 }

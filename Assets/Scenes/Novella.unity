@@ -1192,7 +1192,7 @@ AudioSource:
   m_GameObject: {fileID: 968374323}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 43062b731f29cea48a26964e82f0ef41, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8cdabd28b83db3e42a4ad0ff4f47b920, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
@@ -2257,7 +2257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 562, y: 297}
+  m_AnchoredPosition: {x: -531.4, y: 307}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824641413
@@ -2565,6 +2565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78280afce9aeabb4a8bc0ad0661b33ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyAudio: {fileID: 24100000, guid: 43062b731f29cea48a26964e82f0ef41, type: 2}
 --- !u!114 &1925701084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,13 +2610,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1548241417}
   m_HandleRect: {fileID: 1677820072}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.77
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1925701083}
+        m_TargetAssemblyTypeName: Audio, Assembly-CSharp
+        m_MethodName: Set
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1979631376
 GameObject:
   m_ObjectHideFlags: 0

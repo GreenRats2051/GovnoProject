@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Audio : MonoBehaviour
 {
-    Slider Slider;
-    private void Update()
+    [SerializeField] private AudioMixer MyAudio;
+    public void Set(float sliderVal)
     {
-        Slider.GetComponent<Slider>();
-        AudioListener.volume = Slider.value;
+        MyAudio.SetFloat("MyExposedParam", Mathf.Log10(sliderVal) *20);
     }
 }

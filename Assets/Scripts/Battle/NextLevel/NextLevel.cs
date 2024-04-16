@@ -7,7 +7,7 @@ public class NextLevel : MonoBehaviour
 {
     public string nameScene;
     public SpawnEnemy spawnEnemy;
-    public static int destroyedEnemy;
+    public static int destroyedEnemy = 0;
 
     void FixedUpdate()
     {
