@@ -2692,7 +2692,7 @@ MonoBehaviour:
   isfire: 0
   mousePos: {x: 0, y: 0, z: 0}
   mousePosClick: {x: 0, y: 0, z: 0}
-  bullet: {fileID: 8659589723487944131, guid: 4f5e445f9a0b5234f978bb1b78f9540c, type: 3}
+  bullet: {fileID: 8659589723487944131, guid: c92bedb2d8da70a458ebb719164c7f46, type: 3}
   SpawnBuletpoint: {fileID: 1226809681}
 --- !u!4 &1674492202
 Transform:
