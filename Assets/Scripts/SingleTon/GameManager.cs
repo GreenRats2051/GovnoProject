@@ -26,6 +26,7 @@ public class GameManager
     static public int posAnsvers = 0;
     static public int posTerapia = 0;
     static public int pils = 0;
+    static public int Language = 0;
     private GameManager() { }
 
 }

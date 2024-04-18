@@ -11,6 +11,7 @@ public class Shangescen : MonoBehaviour
     public string NameScene3;
     public void Onclick()
     {
+
         if (GameManager.posTerapia == 0)
         {
             SceneManager.LoadScene(NameScene1);

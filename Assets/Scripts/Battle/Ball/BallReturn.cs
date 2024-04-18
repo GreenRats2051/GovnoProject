@@ -16,7 +16,7 @@ public class BallReturn : MonoBehaviour
     {
         transform.position = new Vector3(0, 0, 0);
         transform.parent = platform.transform;
-        transform.position = platform.transform.position + new Vector3(0, 0.2f, 0);
+        transform.position = platform.transform.position ;
 
         rigidbody2D.velocity = Vector3.zero;
         rigidbody2D.isKinematic = true;

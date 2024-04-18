@@ -12,5 +12,6 @@ public class Answer : MonoBehaviour
         Speach.showButton();
         StartCoroutine(Speach.ShowText());
         GameManager.pos += 1;
+        Speach.nextforbutton = true;
     }
 }
