@@ -10,7 +10,14 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerHeart.OnHeartLost();
+            Destroy(this.gameObject);
+
         }
+    }
+    private void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
+
     }
     private void Start()
     {

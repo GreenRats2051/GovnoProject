@@ -348,7 +348,7 @@ MonoBehaviour:
   - {fileID: 1159886122}
   - {fileID: 813389392}
   - {fileID: 1315400045}
-  nameScene: DayTwo
+  nameScene: DayOne
 --- !u!224 &189035383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2264,7 +2264,7 @@ GameObject:
   - component: {fileID: 1167884606}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

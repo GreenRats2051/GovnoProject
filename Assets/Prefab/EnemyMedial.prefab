@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &653872160299786048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6211251948380496970}
+  m_Layer: 0
+  m_Name: start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6211251948380496970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653872160299786048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.43, y: -0.461, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5290925841295910860}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4616299745191315532
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +44,7 @@ GameObject:
   - component: {fileID: 7656624140215734101}
   - component: {fileID: 4138565788514060309}
   - component: {fileID: 3677858176783341141}
+  - component: {fileID: 3682238711747767240}
   m_Layer: 0
   m_Name: EnemyMedial
   m_TagString: Enemy
@@ -34,6 +66,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6634905564439634391}
+  - {fileID: 6211251948380496970}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7211026254720698954
@@ -177,6 +210,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  nextLevel: {fileID: 0}
   text: {fileID: 5470424353849786756}
   rigidbody2D: {fileID: 4138565788514060309}
   position: {x: 0, y: 0}
@@ -184,6 +218,23 @@ MonoBehaviour:
   speed: 2.5
   idPoint: 0
   hp: 8
+--- !u!114 &3682238711747767240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4616299745191315532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f2bc8503cfbab4e898b244007c7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeNextShoot: 4
+  enemy: {fileID: 4616299745191315532}
+  bullet: {fileID: 1633426794512873898, guid: 5dc55e9f00888fa4aa68563a670a2d52, type: 3}
+  startShoot: {fileID: 6211251948380496970}
+  speedofbullet: 2
 --- !u!1 &7324100124227944351
 GameObject:
   m_ObjectHideFlags: 0

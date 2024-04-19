@@ -5,19 +5,31 @@ using UnityEngine;
 public class ShootToPlayer : MonoBehaviour
 {
     public float timeNextShoot = 2;
-    public float timeShoot;
+    private float lastShootTime;
     public GameObject enemy;
     public GameObject bullet;
     public Transform startShoot;
+    public int speedofbullet;
+    GameObject objWithTag;
+    private void Start()
+    {
+        lastShootTime = Time.time;
+    }
+
     private void Update()
     {
-        if (timeShoot >= timeNextShoot)
+        objWithTag = GameObject.FindWithTag("Player");
+        if (Time.time - lastShootTime >= timeNextShoot)
         {
-            enemy.GetComponent<GameObject>();
-            GameObject bulletPrefab = Instantiate(bullet, startShoot.position, Quaternion.identity);
-            bulletPrefab.GetComponent<Rigidbody2D>().AddForce((enemy.transform.position - startShoot.position) * 2, ForceMode2D.Impulse);
-            timeShoot = 0;
-
+            Shoot();
+            lastShootTime = Time.time;
         }
+    }
+
+    private void Shoot()
+    {
+        GameObject bulletPrefab = Instantiate(bullet, startShoot.position, Quaternion.identity);
+        Rigidbody2D bulletRb = bulletPrefab.GetComponent<Rigidbody2D>();
+        bulletRb.AddForce(( objWithTag.transform.position- startShoot.position) * speedofbullet, ForceMode2D.Impulse);
     }
 }

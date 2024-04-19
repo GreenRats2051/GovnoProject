@@ -308,11 +308,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f2bc8503cfbab4e898b244007c7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeNextShoot: 2
-  timeShoot: 0
+  timeNextShoot: 3
   enemy: {fileID: 4616299745191315532}
   bullet: {fileID: 1633426794512873898, guid: 1af7147191c578b4b8705eb7804425dd, type: 3}
   startShoot: {fileID: 8847188288816013638}
+  speedofbullet: 3
 --- !u!114 &3677858176783341141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +330,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  nextLevel: {fileID: 0}
   text: {fileID: 8621570774458552822}
   rigidbody2D: {fileID: 4138565788514060309}
   position: {x: 0, y: 0}
